@@ -18,8 +18,9 @@ public class MainActivity extends android.app.Activity {
             // 跳转至目标App
             startActivity(intent);
         }else{
+            startActivity(new Intent(Intent.ACTION_VOICE_COMMAND).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
             // 跳转至商店下载目标app
-            launchAppDetail(jumpPkg);
+            //launchAppDetail(jumpPkg);
         }
         // 结束当前activity
         finish();
